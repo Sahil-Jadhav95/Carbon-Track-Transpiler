@@ -1,65 +1,53 @@
 # Carbon-Track Transpiler (CTT)
 
-> **Carbon-Track Transpiler (CTT)** is a Python-based optimization tool that analyzes source code, applies AST-based and JavaScript-aware transformations, and optionally measures the carbon and energy impact of the optimized result.
+Carbon-Track Transpiler (CTT) is a Python-based source-to-source optimization tool that analyzes code, applies AST-based and JavaScript-aware transformations, and optionally measures the energy and carbon impact of the optimized result.
 
-It provides both a **Streamlit web interface** and a **Command Line Interface (CLI)**, enabling users to optimize Python and JavaScript programs while evaluating their environmental impact.
+It includes both a Streamlit web interface and a command-line interface for optimizing Python and JavaScript programs.
 
----
+## Features
 
-## 🚀 Features
+- Automatic code validation before optimization
+- Python AST-based optimization pipeline
+- JavaScript source optimization
+- Optional profiling to identify performance hotspots
+- Carbon and energy estimation using CodeCarbon
+- Optimized code generation
+- Interactive Streamlit dashboard
+- Before-and-after optimization reports
 
-* ✅ Automatic code validation before optimization
-* 🌳 Python AST-based optimization pipeline
-* 📜 JavaScript source optimization
-* 📊 Optional profiling to identify performance hotspots
-* 🌱 Carbon and energy usage estimation using CodeCarbon
-* ⚡ Optimized code generation
-* 📈 Interactive Streamlit dashboard
-* 📋 Before-and-after optimization reports
+## Supported Languages
 
----
+- Python
+- JavaScript
 
-## 🛠️ Supported Languages
-
-* Python
-* JavaScript
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```text
 CTT/
-│
-├── app.py                          # Streamlit Web Application
-├── documentation.md                # Technical Documentation
-│
+├── app.py
 ├── ctt/
-│   ├── __main__.py                 # CLI Entry Point
-│   ├── cli.py                      # Command-Line Interface
-│   ├── parser.py                   # Source Parsing
-│   ├── optimizer.py                # Python Optimizer
-│   ├── optimizer_javascript.py     # JavaScript Optimizer
-│   ├── code_generator.py           # Optimized Code Generator
-│   ├── carbon_audit.py             # Carbon & Energy Measurement
-│   ├── profiler.py                 # Performance Profiler
-│   ├── validator.py                # Source Validator
-│   ├── sample_code/                # Sample Programs
-│   └── tests/                      # Test Cases
-│
+│   ├── __main__.py
+│   ├── cli.py
+│   ├── parser.py
+│   ├── optimizer.py
+│   ├── optimizer_javascript.py
+│   ├── code_generator.py
+│   ├── carbon_audit.py
+│   ├── profiler.py
+│   ├── validator.py
+│   ├── utils.py
+│   ├── sample_code/
+│   └── tests/
+├── .gitignore
 └── README.md
 ```
 
----
+## Requirements
 
-## 📋 Requirements
+- Python 3.10 or later
+- Virtual environment recommended
 
-* Python **3.10** or later
-* Virtual environment (recommended)
-
----
-
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -70,14 +58,14 @@ cd CTT
 
 ### 2. Create a virtual environment
 
-#### Windows
+Windows:
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
-#### Linux / macOS
+Linux / macOS:
 
 ```bash
 python3 -m venv .venv
@@ -90,87 +78,69 @@ source .venv/bin/activate
 pip install streamlit altair pandas codecarbon pytest
 ```
 
-> Install any additional packages required by the project modules if necessary.
+Install any additional packages required by the project modules if necessary.
 
----
+## Usage
 
-# ▶️ Usage
-
-## Run the Streamlit Application
+### Run the Streamlit application
 
 ```bash
 streamlit run app.py
 ```
 
----
+### Run the CLI
 
-## Run the Command-Line Interface
-
-### Show Help
+Show help:
 
 ```bash
 python -m ctt
 ```
 
-### Analyze a Python File
+Analyze a Python file:
 
 ```bash
 python -m ctt analyze path/to/file.py
 ```
 
-### Analyze a JavaScript File
+Analyze a JavaScript file:
 
 ```bash
 python -m ctt analyze path/to/file.js --language javascript
 ```
 
-### Save Optimized Output
+Save optimized output:
 
 ```bash
 python -m ctt analyze path/to/file.py -o optimized_code.py
 ```
 
-### Disable Carbon Audit
+Disable carbon audit:
 
 ```bash
 python -m ctt analyze path/to/file.py --no-audit
 ```
 
-### Enable Profiling
+Enable profiling:
 
 ```bash
 python -m ctt analyze path/to/file.py --profile
 ```
 
-### Select Optimization Mode
-
-General Optimization
+Select optimization mode:
 
 ```bash
 python -m ctt analyze input.py --mode general
-```
-
-Energy Optimization
-
-```bash
 python -m ctt analyze input.py --mode energy
-```
-
-Combined Optimization
-
-```bash
 python -m ctt analyze input.py --mode both
 ```
 
-### Specify a Carbon Budget
+Specify a carbon budget:
 
 ```bash
 python -m ctt analyze input.py --budget 0.0001
 ```
 
----
-
-# ⚙️ Workflow
+## Workflow
 
 ```text
 Input Source Code
@@ -182,7 +152,7 @@ Source Validation
       Parser
         │
         ▼
-(Optional) Performance Profiling
+Optional Performance Profiling
         │
         ▼
 Optimization Engine
@@ -191,63 +161,51 @@ Optimization Engine
 Code Generator
         │
         ▼
-(Optional) Carbon Audit
+Optional Carbon Audit
         │
         ▼
 Optimized Source Code + Report
 ```
 
----
-
-# ✨ Optimizations Performed
+## Optimizations Performed
 
 The optimization engine applies several compiler-inspired transformations, including:
 
-* Constant Folding
-* Strength Reduction
-* Dead Code Elimination
-* Redundant Assignment Removal
-* Identity Operation Removal
-* Boolean Comparison Simplification
-* Variable Inlining
-* Common Subexpression Elimination
-* Loop Fusion
-* Loop-to-Comprehension Conversion
-* List-to-Set Membership Conversion
-* No-op Loop Removal
+- Constant folding
+- Strength reduction
+- Dead code elimination
+- Redundant assignment removal
+- Identity operation removal
+- Boolean comparison simplification
+- Variable inlining
+- Common subexpression elimination
+- Loop fusion
+- Loop-to-comprehension conversion
+- List-to-set membership conversion
+- No-op loop removal
 
----
-
-# 🧪 Running Tests
-
-Execute the test suite using:
+## Running Tests
 
 ```bash
 pytest
 ```
 
----
+## Carbon Audit
 
-# 📊 Carbon Audit
+The project integrates CodeCarbon to estimate:
 
-The project integrates **CodeCarbon** to estimate:
+- Energy consumption
+- CO2 emissions
+- Carbon savings after optimization
 
-* Energy Consumption
-* CO₂ Emissions
-* Carbon Savings after Optimization
+Results depend on hardware configuration, execution environment, and workload characteristics.
 
-> **Note:** Results depend on hardware configuration, execution environment, and workload characteristics.
+## Notes
 
----
+- Review generated code before deploying it in production.
+- JavaScript optimization support may vary depending on the input program.
+- Carbon audit results are approximate and intended for comparison purposes.
 
-# 📌 Notes
-
-* Review generated code before deploying it in production.
-* JavaScript optimization support may vary depending on the input program.
-* Carbon audit results are approximate and intended for comparison purposes.
-
----
-
-# 📄 License
+## License
 
 This project is intended for academic and educational purposes.
