@@ -7,7 +7,7 @@ def compute_square(x):
 
 def compute_cube(x):
     return x ** 3
-
+    
 result = 0
 result = 42
 
