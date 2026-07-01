@@ -1,5 +1,3 @@
-// Sample: intentionally inefficient JavaScript code for CTT
-
 const width = 2 + 3;
 const height = 10 * 1;
 let result = 0;
