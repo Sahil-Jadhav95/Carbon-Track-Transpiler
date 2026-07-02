@@ -61,8 +61,8 @@ CTT/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/CTT.git
-cd CTT
+git clone https://github.com/Sahil-Jadhav95/Carbon-Track-Transpiler.git
+cd Carbon-Track-Transpiler
 ```
 
 ### 2. Create a virtual environment
