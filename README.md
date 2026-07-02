@@ -1,5 +1,14 @@
 # Carbon-Track Transpiler (CTT)
+<p align="center">
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Support-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CodeCarbon](https://img.shields.io/badge/CodeCarbon-Carbon%20Audit-2E8B57?style=for-the-badge)
+![Pytest](https://img.shields.io/badge/Pytest-Test%20Suite-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![CLI](https://img.shields.io/badge/CLI-Available-6C757D?style=for-the-badge&logo=windows-terminal&logoColor=white)
+
+</p>
 Carbon-Track Transpiler (CTT) is a Python-based source-to-source optimization tool that analyzes code, applies AST-based and JavaScript-aware transformations, and optionally measures the energy and carbon impact of the optimized result.
 
 It includes both a Streamlit web interface and a command-line interface for optimizing Python and JavaScript programs.
