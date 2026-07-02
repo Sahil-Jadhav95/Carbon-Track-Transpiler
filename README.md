@@ -30,7 +30,7 @@ It includes both a Streamlit web interface and a command-line interface for opti
 - JavaScript
 
 ## Project Structure
-
+ 
 ```text
 CTT/
 ├── app.py
