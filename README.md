@@ -84,7 +84,7 @@ source .venv/bin/activate
 ### 3. Install dependencies
 
 ```bash
-pip install streamlit altair pandas codecarbon pytest
+pip install streamlit altair pandas codecarbon escodegen esprima pytest
 ```
 
 Install any additional packages required by the project modules if necessary.
